@@ -1,0 +1,943 @@
+/*
+Theme Name: Hershel - Child
+Theme URI: https://livewp.site/wp/md/hershel/
+Author: Gt3themes
+Author URI: gt3themes.com
+Description: GT3themes team presents absolutely fresh and powerful WordPress theme. It combines new technologies and functional design that helps to showcase your content in better way. This WordPress theme is developed with attention to details, so you can create effective presentation of a website easily. Enjoy building web pages with our product!
+Version: 2.2.1
+License: GNU General Public License version 3.0
+License URI: http://www.gnu.org/licenses/gpl-3.0.html
+Text Domain: hershel_child
+*/
+:root {
+	--primary-color: #a71f23;
+	--secondary-color: #febe2d;
+	--white: #fff;
+	--grey: #f2f2f2;
+	--black: #505050;
+	--green: #0f9000;
+	--green-light: #569D5B;
+	--blue: #1A2F49;
+	--boxShadow: 2px 2px 5px 0px #00000045;
+	--boxShadow-hover: 0px 0px 5px 0px #00000045;
+	--border-radius: 5px;
+}
+.color-primary {
+	color: var(--primary-color);
+}
+.color-blue {
+	color: var(--blue);
+}
+.white {
+	color: var(--white);
+}
+/* END colors  */
+/* typography */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+body,
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="submit"],
+textarea,
+p,
+.wpac {
+	font-family: "Poppins", sans-serif;
+}
+
+h1 {
+	margin-bottom: 14px;
+}
+
+h2 {
+	margin-bottom: 16px;
+}
+
+h3 {
+	margin-bottom: 18px;
+}
+
+h4 {
+	margin-bottom: 17px;
+}
+h1.heading {
+	font-size: 27px;
+	text-align: center;
+	font-weight: 600;
+	text-transform: uppercase;
+	line-height: 1;
+}
+@media (min-width: 992px) {
+	h1.heading {
+		font-size: 33px;
+	}
+}
+@media (min-width: 1200px) {
+	h1.heading {
+		font-size: 50px;
+	}
+}
+h2.heading {
+	font-size: 27px;
+	text-align: center;
+	font-weight: 600;
+	text-transform: uppercase;
+	line-height: 1;
+}
+@media (min-width: 992px) {
+	h2.heading {
+		font-size: 33px;
+	}
+}
+@media (min-width: 1200px) {
+	h2.heading {
+		font-size: 50px;
+	}
+}
+h2.section-title {
+	font-size: 40px;
+	line-height: 40px;
+}
+h3.heading {
+	font-size: 22px;
+	font-weight: 500;
+	line-height: 1.5;
+}
+@media (min-width: 992px) {
+	h3.heading {
+		font-size: 27px;
+	}
+}
+@media (min-width: 1200px) {
+	h3.heading {
+		font-size: 33px;
+	}
+}
+/* END typography  */
+/* utilities */
+.subheading-row {
+	padding: 0 0 3em 0;
+}
+@media (min-width: 992px) {
+	.subheading-row {
+		padding: 6em 0;
+	}
+}
+.box-shadow_element {
+	box-shadow: var(--boxShadow);
+}
+.box-shadow_element:hover {
+	box-shadow: var(--boxShadow-hover);
+}
+.cursor-default {
+	cursor: default !important;
+}
+/* END utilities */
+.alma-primary-color {
+	color: var(--primary-color);
+}
+.main_header {
+	margin-bottom: 0;
+}
+.x2 {
+	font-size: 200%;
+}
+@media only screen and (min-width: 768px) {
+	.x2 {
+		font-size: 300%;
+	}
+}
+.top_search label {
+	position: absolute;
+	color: transparent;
+}
+.parallax-image {
+	padding-top: 6em;
+	padding-bottom: 6em;
+}
+.parallax-image.lg {
+	padding-top: 0;
+	padding-bottom: 0;
+	min-height: 60vh;
+}
+.parallax-image .vc_parallax-inner.skrollable.skrollable-between {
+	background-position: center;
+}
+.hide-title h2.wpb_singleimage_heading {
+	text-indent: -200vw;
+	position: absolute;
+}
+.margin-none {
+	margin: 0 !important;
+}
+.alma-info-circle {
+	margin: 0 !important;
+}
+
+.wrapper {
+	padding: 10px 0 0;
+}
+#page_container > .wrapper {
+	padding: 0;
+}
+/* .home #page_container > .wrapper {
+  padding: 0;
+} */
+dt {
+	text-decoration: none;
+	margin-bottom: 16px;
+	font-size: 25px;
+	line-height: 32px;
+}
+.subject {
+	display: flex;
+	flex-direction: row;
+}
+.subject .ult-responsive {
+	margin-top: 1em;
+}
+.subject .fa::before {
+	font-size: 2em;
+	margin-right: 10px;
+}
+.fa {
+	margin-right: 1em;
+}
+.page_title::before {
+	font-family: FontAwesome;
+	float: left;
+	margin: 1em 0.5em 1em 0;
+	font-size: 2em;
+	line-height: 1;
+}
+.page_title .fa {
+	font-size: 2em;
+	margin-top: 1em;
+}
+.school-name::before {
+	font-family: FontAwesome;
+	text-align: right;
+	margin-right: 10px;
+	float: left;
+}
+.school-name.proctored::before,
+.school-name.accepted::before {
+	content: "\f19c";
+}
+.school-name a {
+	display: flex;
+}
+.page-academic-tutoring .page_title h1::before {
+	content: "\f02d";
+}
+.page-proctor-services-los-angeles .page_title h1::before {
+	content: "\f06e";
+}
+.page-proctor-services-los-angeles .proctor-register-btn {
+	position: absolute;
+	right: 2em;
+	bottom: 1em;
+}
+/* about page  */
+.meet-paul .aio-icon-box.left-icon {
+	display: flex;
+	flex-direction: column;
+}
+@media (max-width: 991px) {
+	.meet-paul .aio-icon-left {
+		margin-bottom: 2em;
+	}
+}
+@media (min-width: 992px) {
+	.meet-paul .aio-icon-box.left-icon {
+		display: inline-block;
+	}
+}
+
+.faq-expand .ult_exp_content {
+	border: 0.25px inset rgb(170, 59, 35);
+}
+
+.faq-expand .ult_ecpsub_cont {
+	text-align: left;
+	margin-left: 15px;
+}
+
+.faq-expand .ult_exp_section-main,
+.faq-expand .ult_expheader {
+	display: flex;
+	align-items: center;
+	line-height: 1.2;
+	text-transform: none;
+}
+
+.faq-expand .wpb_content_element.wpb_raw_html {
+	margin-bottom: 0;
+}
+
+/* END about page  */
+
+.about-accordian .vc_toggle_title h4 {
+	font-size: 120%;
+}
+.page-accepted-schools .page_title h1::before,
+.page-schools-proctored .page_title h1::before {
+	content: "\f19c";
+}
+.page-testimonials .page_title h1::before {
+	content: "\f086";
+}
+.page-contact .page_title h1::before {
+	content: "\f075";
+}
+.page-blog .page_title h1:before {
+	content: "\f044";
+}
+.yelp-footer-award > img {
+	width: -webkit-fill-available;
+}
+.wp-yrw .wp-yelp-right {
+	padding: 0 1.5em 0 0 !important;
+}
+.wpac.wp-yrw .wp-yelp-content-inner,
+.wpac.wp-yrw .wp-yelp-list,
+.wpac.wp-yrw .wp-yelp-place,
+.wpac.wp-yrw .wp-yelp-reviews {
+	display: flex;
+}
+@media only screen and (max-width: 690px) and (max-width: 995px) {
+	.wpac.wp-yrw .wp-yelp-list {
+		flex-direction: column;
+	}
+}
+.wpac.wp-yrw .wp-yelp-place {
+	flex-grow: 1;
+}
+.wp-yrw .wp-yelp-powered,
+.wp-yrw .wp-yelp-time {
+	color: #242424 !important;
+}
+.wp-yrw .wp-yelp-reviews img,
+.wpac.wp-yrw .wp-yelp-place .wp-yelp-left {
+	display: none !important;
+}
+@media only screen and (max-width: 690px) and (max-width: 995px) {
+	.wpac.wp-yrw .wp-yelp-list .wp-yelp-reviews {
+		flex-direction: column;
+	}
+}
+@media only screen and (min-width: 768px) {
+	.wpac.wp-yrw .wp-yelp-list .wp-yelp-reviews {
+		flex-direction: row;
+	}
+}
+.wpac.wp-yrw .wp-yelp-list .wp-yelp-reviews .wp-yelp-name {
+	color: var(--primary-color) !important;
+}
+.wpac.wp-yrw .wp-yelp-content-inner {
+	flex-grow: 2;
+}
+@media only screen and (min-width: 768px) {
+	.wpac.wp-yrw .wp-yelp-content-inner .wp-yelp-stars {
+		display: block;
+	}
+}
+.testimonials-container .vc_row:nth-child(even) .fa-quote-left:before {
+	content: url("/wp-content/uploads/2018/08/yelp_socialnetwork_19999.png");
+}
+.image-container {
+	margin-bottom: 10px;
+}
+.image-container figure {
+	width: 100%;
+	vertical-align: top;
+	margin: 0;
+	border-radius: 5px;
+}
+.image-container img {
+	border-radius: 4px;
+}
+.center-text {
+	text-align: center;
+}
+
+.dotted-line {
+	border-top: 1px dotted #777777;
+	width: 73px;
+	margin: 0 auto;
+	display: block;
+	max-width: 100%;
+	height: 20px;
+}
+.shadow-container {
+	box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.46);
+	z-index: 9;
+}
+.content_block .vc_gitem-zone {
+	background-color: var(--white) !important;
+}
+.fa-quote-right:before {
+	margin-right: 42px;
+}
+.icon-title,
+.list-container {
+	display: flex;
+}
+.list-column {
+	display: flex;
+	flex: 1;
+}
+.content_block .page_title {
+	text-align: left;
+	padding: 0 15px 15px;
+}
+.content_block .page_title h1::before {
+	font-size: 1.1em;
+	color: #58595b;
+	font-family: fontAwesome;
+	margin: 0 20px 0 0;
+}
+@media only screen and (max-width: 690px) and (max-width: 995px) {
+	.testimonial-outer-container .module_testimonial {
+		padding-left: 0;
+		padding-right: 0;
+	}
+}
+.testimonial-outer-container .testimonials_text {
+	padding: 0;
+}
+.testimonial-outer-container li .item .testimonials_photo {
+	width: 20px;
+	height: 20px;
+	border: none;
+}
+.logo-grid {
+	display: flex;
+	flex-wrap: wrap;
+}
+@media only screen and (min-width: 992px) {
+	.logo-grid.schools a {
+		text-align: center;
+	}
+	.logo-grid.schools img {
+		max-width: 60%;
+	}
+}
+.col-4,
+.col-5 {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}
+.col-4 {
+	flex: 1 1 45%;
+	margin: 5px;
+}
+.col-5 {
+	flex: 1 1 35%;
+	margin: 5px 5px 40px;
+}
+@media only screen and (min-width: 768px) {
+	.col-4,
+	.col-5 {
+		flex: 1 1 18%;
+	}
+}
+.list-container li {
+	display: flex;
+	margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+	.list-container {
+		flex-direction: column;
+	}
+	.social-icon-about {
+		display: flex;
+	}
+}
+.pre-pre-footer {
+	margin-right: auto;
+	margin-left: auto;
+	padding: 25px 15px;
+}
+@media only screen and (min-width: 768px) {
+	.pre-pre-footer {
+		width: 750px;
+	}
+}
+@media only screen and (min-width: 992px) {
+	.pre-pre-footer {
+		width: 970px;
+	}
+}
+@media only screen and (min-width: 1200px) {
+	.pre-pre-footer {
+		width: 1200px;
+	}
+}
+.wpac.wp-yrw {
+	font-family: "Raleway" !important;
+}
+.mc_var_label {
+	display: block !important;
+}
+.testimonials-container .vc_row:nth-child(even) .testimonials_photo i {
+	background-color: var(--white);
+}
+@media only screen and (max-width: 995px) {
+	.testimonials-container
+		.vc_row:nth-child(even)
+		.testimonials_list.items2
+		li {
+		width: 100%;
+	}
+}
+.social-footer {
+	margin-bottom: 20px;
+}
+.social-footer .Defaults-facebook-square,
+.social-footer .Defaults-linkedin-square,
+.social-footer .Defaults-instagram,
+.social-footer .Defaults-yelp,
+.social-footer .Defaults-at {
+	font-size: 2em;
+}
+.icon-circle-list + .info-c-full {
+	min-height: 65%;
+	margin: 19% 25%;
+	border-radius: 0;
+	padding: 0;
+}
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner {
+	width: 1em;
+	height: 1em;
+}
+/* header nav ul.menu > li > a {
+  font-weight: 500 !important;
+  line-height: 65px;
+} */
+.main_header.type1 header nav ul.menu > li.current-menu-ancestor,
+.main_header.type1 header nav ul.menu > li.current-menu-item > a,
+.main_header.type1 header nav ul.menu > li.current-menu-parent > a {
+	background: none !important;
+	color: #b22d1e !important;
+	font-weight: 600 !important;
+}
+.fixed-menu header nav ul.menu > li.current-menu-item > a,
+.fixed-menu header nav ul.menu > li.current-menu-parent > a {
+	background: none !important;
+	color: #a72f23 !important;
+	font-weight: 600 !important;
+}
+/* .logo,
+.logo img {
+	margin-left: 0;
+} */
+/* header nav ul.menu > li > a {
+  letter-spacing: 0.25px;
+} */
+/* .fixed-menu header,
+.header_parent_wrap header,
+.main_header,
+.top_search form input[type="text"] {
+  border-bottom: #b22d1e solid 2px;
+  margin-bottom: 0;
+} */
+.mb35 {
+	margin-bottom: 0;
+}
+.slotholder {
+	padding-top: 0;
+}
+.ultb3-box {
+	margin-top: 24px;
+}
+.content_block .ultb3-desc {
+	margin-bottom: 0 !important;
+}
+.flex-caption a.link_image {
+	font-size: large;
+}
+.flex-caption h2.post-title {
+	margin-bottom: 0;
+}
+.wpb_column.vc_column_container.vc_col-sm-9 h3 {
+	color: #b22d1e;
+}
+.listing_meta {
+	font-size: 18px !important;
+}
+/* .listing_meta span.author {
+  display: none;
+}
+.listing_meta span.category {
+  display: none;
+  display: none;
+}
+.listing_meta span:nth-of-type(2n) {
+  display: none;
+} */
+.listing_meta span:after {
+	content: no-close-quote !important;
+}
+/* #comments {
+  display: none;
+} */
+.shortcode_button.btn_type5 {
+	background: #b22d1e;
+	border-color: #b22d1e;
+}
+.academicTutoring:hover .Defaults-check-square-o {
+	color: var(--primary-color);
+}
+.collegeCounseling:hover .Defaults-bank {
+	color: #5d9842;
+}
+.proctorServices:hover .Defaults-eye {
+	color: var(--secondary-color);
+}
+.academicTutoring:hover .ult_pricing_heading {
+	background-color: var(--primary-color) !important;
+}
+.collegeCounseling:hover .ult_pricing_heading {
+	background-color: #5d9842 !important;
+}
+.proctorServices:hover .ult_pricing_heading {
+	background-color: var(--secondary-color) !important;
+}
+.acceptedSchools,
+.acceptedSchoolsRow {
+	margin-bottom: 0 !important;
+}
+/* .icon_description {
+  margin: 0 !important;
+} */
+.smile_icon_list_wrap,
+.wpb_row .wpb_column .wpb_wrapper .smile_icon_list_wrap {
+	margin-bottom: 0 !important;
+}
+.ult_cl_link_10 a span.ult_btn10_span {
+	border-radius: 4px !important;
+}
+.footer {
+	border-top: #b22d1e solid 3px;
+}
+.howitworks .ult_pricing_heading {
+	padding: 15px 0 0 !important;
+}
+.howitworks .ult_price_body_block {
+	background: none !important;
+	margin-top: -7px;
+}
+.widget_archive ul li,
+.widget_categories ul li,
+.widget_meta ul li,
+.widget_nav_menu ul li,
+.widget_pages ul li,
+.widget_recent_comments ul li,
+.widget_recent_entries ul li {
+	padding: 0 0 6.5px !important;
+}
+.widget_archive ul li a:after,
+.widget_categories ul li a:after,
+.widget_meta ul li a:after,
+.widget_nav_menu ul li a:after,
+.widget_pages ul li a:after,
+.widget_recent_entries ul li a:after {
+	content: none !important;
+}
+.widget_archive ul li a,
+.widget_categories ul li a,
+.widget_meta ul li a,
+.widget_nav_menu ul li a,
+.widget_pages ul li a,
+.widget_recent_entries ul li a {
+	padding: 0 !important;
+}
+.footer_bottom {
+	padding: 14px 0 10px !important;
+}
+/* .footer_bottom .social_icons {
+  display: none;
+} */
+.pre_footer .widget_text.contact_text {
+	background: none !important;
+}
+table td,
+table th {
+	padding: 7px;
+	border: none !important;
+}
+.cooperInstagram.wpb_column.vc_column_container.vc_col-sm-6 {
+	padding-left: 0;
+}
+.cooperTwitter.wpb_column.vc_column_container.vc_col-sm-6 {
+	padding-right: 0;
+}
+.content_block .uavc-list-content {
+	margin-bottom: 0 !important;
+}
+.content_block .vc_gitem-zone {
+	background-color: none !important;
+}
+/* .recent_posts_info {
+  display: none;
+} */
+.socialMedia {
+	padding-left: 38px !important;
+}
+.bio.wpb_column.vc_column_container.vc_col-sm-6 {
+	padding-right: 0 !important;
+}
+.socialIconContainer {
+	padding-left: 0 !important;
+}
+.servicesOverview .info-circle-heading {
+	font-size: 25px;
+	margin-bottom: 1em;
+}
+.servicesOverview .info-circle-text {
+	font-size: 14px;
+	line-height: 23px;
+}
+.servicesOverview .info-circle-sub-def {
+	padding: 50px;
+}
+.servicesOverview .info-circle-text ul,
+.servicesOverview .info-circle-text ol {
+	text-align: left;
+}
+@media only screen and (max-width: 375px) {
+	.bio button.ult-align-right {
+		float: none !important;
+	}
+	.vc_row.wpb_row.vc_inner.vc_row-fluid.socialMedia {
+		margin-left: 55px !important;
+	}
+	.socialIconContainer {
+		padding-left: 27px !important;
+	}
+	.light {
+		color: #fff !important;
+	}
+	.ult-new-ib-desc {
+		padding: 9px 23px !important;
+	}
+	.ult-new-ib-content {
+		padding-top: 5px !important;
+	}
+	.logo,
+	.logo img {
+		margin-left: 0;
+	}
+	.wpb_column.vc_column_container.vc_col-sm-12.vc_custom_1447797144871 {
+		padding-bottom: 25px;
+	}
+	.wpb_column.vc_column_container.vc_col-sm-9 h3 {
+		margin-top: 18px;
+	}
+	.info-circle-wrapper .smile_icon_list.left li .icon_description {
+		margin-left: 0.7em !important;
+	}
+	.committedStudents.wpb_column.vc_column_container.vc_col-sm-4 {
+		padding-bottom: 40px;
+	}
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+	.vc_row.wpb_row.vc_inner.vc_row-fluid.socialMedia.vc_custom_1452198271368 {
+		margin-right: 0 !important;
+		margin-left: 0 !important;
+	}
+	.socialMedia {
+		padding-left: 17px !important;
+	}
+	.ult-new-ib-desc {
+		padding: 8px 19px !important;
+	}
+	.ult-ib-effect-style13 h2 {
+		font-size: 17px !important;
+	}
+	.ult-new-ib-content {
+		display: table !important;
+		font-size: 13px !important;
+		padding: 7px 0 !important;
+	}
+	.info-c-full.cirlce-noicon {
+		width: 85% !important;
+		margin: 17% 0 8% 8% !important;
+	}
+
+	.servicesOverview hr {
+		width: 58% !important;
+	}
+	.credits .icon_list_icon.animated.fadeInLeft.delay-03 {
+		width: 2em !important;
+	}
+}
+@media only screen and (min-width: 959px) {
+	.main_header .logo_sect img {
+		max-width: 80% !important;
+		height: auto !important;
+	}
+	a.menu_toggler {
+		top: 50px;
+	}
+}
+@media only screen and (min-width: 1824px) {
+	.tp-bgimg.defaultimg {
+		background-position: 50% 40% !important;
+	}
+}
+/* header nav ul.menu > li > a {
+  line-height: 65px !important;
+} */
+.tagline a {
+	color: #5c5c5c;
+}
+.lazy-load {
+	transition: opacity 0.15s;
+	opacity: 0;
+}
+
+.lazy-load.is-loaded {
+	opacity: 0;
+}
+
+/* * */
+/* New styles */
+/* * */
+.info-circle__how-it-works .info-circle-text a {
+	color: var(--secondary-color);
+}
+.info-circle__how-it-works .info-circle-active {
+	box-shadow: 1px 1px 8px var(--black);
+}
+.info-circle__container .info-circle-icons {
+	z-index: 9;
+	position: relative;
+}
+.info-circle__container
+	.info-c-full-br
+	.icon-circle-list
+	.info-circle-img-icon {
+	width: 160px;
+	min-width: 160px;
+	max-width: unset;
+	position: absolute;
+	left: -44px;
+	margin: 0 auto;
+}
+/* media grid image backgrounds */
+.content_block .vc_gitem-zone {
+	background-color: transparent !important;
+}
+/* custom masonry grid  */
+.masonry-grid-mod__container .vc_gitem-animate-scaleIn {
+	overflow: visible;
+}
+.masonry-grid-mod__container .masonry-grid-mod-one {
+	background-size: 100%;
+}
+.masonry-grid-mod__container .vc_gitem-animate-scaleIn::before,
+.masonry-grid-mod__container .vc_gitem-animate-scaleIn::after {
+	content: none;
+}
+.how-it-works__row .ult-main-seperator-inner {
+	transform: rotate(180deg);
+}
+.how-it-works__row .aio-icon.none {
+	width: 82%;
+}
+.stats__row {
+	border-top: 3px solid var(--secondary-color);
+}
+.rev-slider-container .bottom_seperator {
+	z-index: 9;
+}
+.content_block .counter-block__custom .counter_suffix,
+.content_block .counter-block__custom .counter_prefix {
+	color: var(--white) !important;
+}
+.content_block .counter-block__custom .counter_suffix {
+	padding-left: 5px;
+}
+.content_block .counter-block__custom .counter_prefix {
+	padding-right: 5px;
+}
+/* icons */
+.icons-number__container .smile_icon_list li i::after {
+	font-size: 30px;
+	background: transparent;
+	z-index: 9;
+	position: absolute;
+	left: 35%;
+	color: var(--white);
+	font-family: "Poppins", sans-serif;
+	font-weight: bold;
+	font-style: normal;
+	text-align: center;
+}
+.icons-number__container .smile_icon_list li:nth-child(1) i::after {
+	content: "1";
+	left: 40%;
+}
+.icons-number__container .smile_icon_list li:nth-child(2) i::after {
+	content: "2";
+}
+.icons-number__container .smile_icon_list li:nth-child(3) i::after {
+	content: "3";
+}
+/* * */
+/* media queries */
+/* * */
+
+/* mobile  */
+@media (max-width: 480px) {
+	.info-circle__how-it-works .icon_list_icon {
+		width: 45px !important;
+		height: 45px !important;
+		line-height: 1.5 !important;
+	}
+	.rev-slider-container .bottom_seperator .uvc-x-large-triangle {
+		-moz-transform: scaleY(-0.6);
+		-webkit-transform: scaleY(-0.6);
+		-o-transform: scaleY(-0.6);
+		-ms-transform: scaleY(-0.6);
+	}
+}
+.icons-three .icon-border__double i {
+	padding: 17px;
+	border-width: 2px;
+	border-style: solid;
+	border-radius: 50%;
+}
+
+.icons-three__primary .icon-border__double i {
+	border-color: var(--primary-color);
+}
+
+.icons-three__green .icon-border__double i {
+	border-color: var(--blue);
+}
+
+.icon-hover__up .icon_list_icon {
+	transition: all 0.2s ease-in-out;
+}
+
+.icon-hover__up .icon_list_item:hover .icon_list_icon {
+	border-color: #d3d3d3 !important;
+}
+.meet-paul .ult-just-icon-wrapper {
+	margin-right: 3em;
+}
+.lead {
+	font-size: 110%;
+	line-height: 1.25;
+}

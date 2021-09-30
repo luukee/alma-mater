@@ -1,0 +1,918 @@
+// Table of Contents
+// 01 - Variables
+// 02 - Mixins
+// 03 - Colors
+// 04 - Typogrophy
+// 05 - Navigation
+// 06 - Images
+// 07 - Spacing
+// 08 - Lists
+// 09 - Icons
+// 10 - Footer
+// 01 - Variables
+// Media queries 
+// http://thesassway.com/intermediate/responsive-web-design-in-sass-using-media-queries-in-sass-32
+
+$phone: "only screen and (max-width : 30em)";
+$Venice: "only screen and (max-width: 767px)";
+$medium: "only screen and (min-width: 768px)";
+$large: "only screen and (min-width: 992px)";
+$xlarge: "only screen and (min-width: 1200px)";
+// 02 - Mixins 
+@mixin x2 {
+    font-size: 200%;
+}
+@mixin x3 {
+    font-size: 300%;
+}
+@mixin margin-none {
+    margin: 0 !important;
+}
+// 03 - Colors
+.alma-primary-color {
+    color: #a71f23;
+}
+//  04 - Typogrophy
+// Sizing
+
+.x2 {
+    @include x2;
+    @media #{$medium} {
+        @include x3;
+    }
+}
+// 05 - Navigation
+.top_search label {
+    // position: absolute;
+    color: transparent;
+}
+// 06 - Images
+// // Home fun facts
+
+.parallax-image {
+    padding-top: 6em;
+    padding-bottom: 6em;
+    // resize for large banner parallax
+    &.lg {
+        padding-top: 0;
+        padding-bottom: 0;
+        min-height: 60vh;
+    }
+    // parallax align background image
+    .vc_parallax-inner.skrollable.skrollable-between {
+        background-position: center;
+    }
+}
+// single image hide title
+
+.hide-title h2.wpb_singleimage_heading {
+    text-indent: -200vw;
+    position: absolute;
+}
+// 07 - Spacing
+// all rows
+body:not(.page-home) .vc_row:not(.parallax-image) {
+    margin-bottom: 3rem;
+}
+.margin-none {
+    @include margin-none;
+}
+
+.alma-info-circle {
+    @include margin-none;
+}
+// every page very top wrapper fix
+
+.wrapper {
+    padding: 10px 0 0;
+}
+// homepage very top wrapper fix
+
+.home #page_container > .wrapper {
+    padding: 0;
+}
+// - 08 Lists
+dt {
+    text-decoration: none;
+    margin-bottom: 16px;
+    font-size: 25px;
+    line-height: 32px;
+}
+// academic tutoring subjects
+
+.subject {
+    display: flex;
+    flex-direction: row;
+
+    .ult-responsive {
+        margin-top: 1em;
+    }
+
+    .fa::before {
+        font-size: 2em;
+        margin-right: 10px;
+    }
+}
+// 09 - Icons
+.fa {
+    margin-right: 1em;
+}
+    // page titles
+.page_title {
+    &::before {
+        font-family: FontAwesome;
+        float: left;
+        margin: 1em .5em 1em 0;
+        font-size: 2em;
+        line-height: 1;
+    }
+    .fa {
+        font-size: 2em;
+        margin-top: 1em;
+    }
+}
+// college lists
+.school-name {
+    &::before {
+        font-family: FontAwesome;
+        text-align: right;
+        margin-right: 10px;
+        float: left;
+    }
+    &.proctored::before,
+    &.accepted::before {
+        content: "\f19c";
+    }
+    a {
+        display: flex;
+    }
+}
+// college list END
+
+// *********************** //
+// PAGES
+// *********************** //
+
+// about page
+.page-about {
+    .page_title h1::before {
+        content: "\f02e";
+    }
+    .flex-col-reverse .ult-new-ib-desc {
+        display: flex;
+        flex-direction: column-reverse;
+    }
+
+    .flex-col-reverse .ult-ib-effect-style13 .ult-new-ib-title::after {
+        top: 0;
+    }
+
+    .flex-col-reverse .ult-new-ib {
+        position: unset;
+    }
+
+    .content_block .ult-new-ib .ult-new-ib-desc {
+        padding: 9px 30px;
+    }
+    .ult_modal-body p img.alignleft {
+        margin: 0 1em 1em 0 !important;
+    }
+}
+// about page END
+
+// academic tutoring page
+.page-academic-tutoring {
+    .page_title h1::before {
+        content: "\f02d";
+    }
+}
+
+// proctor services page
+.page-proctor-services-los-angeles {
+    .page_title h1::before {
+        content: "\f06e";
+    }
+    .proctor-register-btn {
+        position: absolute;
+        right: 2em;
+        bottom: 1em;
+    }
+}
+// accepted schools page
+
+.page-accepted-schools,
+.page-schools-proctored {
+    .page_title h1::before {
+        content: "\f19c";
+    }
+}
+
+// testimonials page
+.page-testimonials .page_title h1::before {
+    content: "\f086";
+}
+
+// contact page
+.page-contact {
+    .page_title h1::before {
+        content: "\f075";
+    }
+}
+
+// blog page
+.page-blog {
+    .page_title h1:before {
+        content: "\f044";
+    }
+}
+
+
+// 10 - Footer
+
+.yelp-footer-award > img {
+    width: -webkit-fill-available;
+}
+// yelp each review
+.wp-yrw .wp-yelp-right {
+    padding: 0 1.5em 0 0 !important;
+}
+
+.wpac.wp-yrw .wp-yelp-content-inner,
+.wpac.wp-yrw .wp-yelp-list,
+.wpac.wp-yrw .wp-yelp-place,
+.wpac.wp-yrw .wp-yelp-reviews {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+@media only screen and (max-width:690px) and (max-width: 995px) {
+    .wpac.wp-yrw .wp-yelp-list {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+
+.wpac.wp-yrw .wp-yelp-place {
+    -webkit-box-flex: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+}
+// yelp text
+
+.wp-yrw {
+    .wp-yelp-powered,
+    .wp-yelp-time {
+        color: #242424 !important;
+    }
+}
+
+.wp-yrw .wp-yelp-reviews img,
+.wpac.wp-yrw .wp-yelp-place .wp-yelp-left {
+    display: none !important;
+}
+@media only screen and (max-width:690px) and (max-width: 995px) {
+    .wpac.wp-yrw .wp-yelp-list .wp-yelp-reviews {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+}
+@media only screen and (min-width: 768px) {
+    .wpac.wp-yrw .wp-yelp-list .wp-yelp-reviews {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+    }
+}
+
+.wpac.wp-yrw .wp-yelp-list .wp-yelp-reviews .wp-yelp-name {
+    color: #a71f23 !important;
+}
+
+.wpac.wp-yrw .wp-yelp-content-inner {
+    -webkit-box-flex: 2;
+    -webkit-flex-grow: 2;
+    -ms-flex-positive: 2;
+    flex-grow: 2;
+}
+@media only screen and (min-width: 768px) {
+    .wpac.wp-yrw .wp-yelp-content-inner .wp-yelp-stars {
+        display: block;
+    }
+}
+
+.testimonials-container .vc_row:nth-child(even) .fa-quote-left:before {
+    content: url("/wp-content/uploads/2018/08/yelp_socialnetwork_19999.png");
+}
+// END footer
+
+.image-container {
+    margin-bottom: 10px;
+}
+
+.image-container figure {
+    width: 100%;
+    vertical-align: top;
+    margin: 0;
+    border-radius: 5px;
+}
+
+.image-container img {
+    border-radius: 4px;
+}
+
+.center-text {
+    text-align: center;
+}
+
+h1 {
+    margin: 1em 0;
+}
+
+.dotted-line {
+    border-top: 1px dotted #777777;
+    width: 73px;
+    margin: 0 auto;
+    display: block;
+    max-width: 100%;
+    height: 20px;
+}
+
+.shadow-container {
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.46);
+    z-index: 9;
+}
+
+.content_block .vc_gitem-zone {
+    background-color: white !important;
+}
+
+.fa-quote-right:before {
+    margin-right: 42px;
+}
+/* proctored schools and added schools list */
+.icon-title,
+.list-container {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.list-column {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1;
+}
+
+.content_block .page_title {
+    text-align: left;
+    padding: 0 15px 15px;
+}
+
+.content_block .page_title h1::before {
+    font-size: 1.1em;
+    color: #58595b;
+    font-family: fontAwesome;
+    margin: 0 20px 0 0;
+}
+@media only screen and (max-width:690px) and (max-width: 995px) {
+    .testimonial-outer-container .module_testimonial {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.testimonial-outer-container .testimonials_text {
+    padding: 0;
+}
+
+.testimonial-outer-container li .item .testimonials_photo {
+    width: 20px;
+    height: 20px;
+    border: none;
+}
+
+.logo-grid {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+@media only screen and (min-width: 992px) {
+    .logo-grid.schools {
+        a {
+            text-align: center;
+        }
+
+        img {
+            max-width: 60%;
+        }
+    }
+}
+
+.col-4,
+.col-5 {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.col-4 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 45%;
+    -ms-flex: 1 1 45%;
+    flex: 1 1 45%;
+    margin: 5px;
+}
+
+.col-5 {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1 1 35%;
+    -ms-flex: 1 1 35%;
+    flex: 1 1 35%;
+    margin: 5px 5px 40px;
+}
+@media only screen and (min-width: 768px) {
+    .col-4,
+    .col-5 {
+        -webkit-box-flex: 1;
+        -webkit-flex: 1 1 18%;
+        -ms-flex: 1 1 18%;
+        flex: 1 1 18%;
+    }
+}
+
+.list-container li {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    margin-bottom: 30px;
+}
+@media (max-width: 768px) {
+    .list-container {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+        flex-direction: column;
+    }
+
+    .social-icon-about {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex;
+    }
+}
+/* END proctored schools and added schools list */
+.pre-pre-footer {
+    margin-right: auto;
+    margin-left: auto;
+    padding: 25px 15px;
+}
+@media only screen and (min-width: 768px) {
+    .pre-pre-footer {
+        width: 750px;
+    }
+}
+@media only screen and (min-width: 992px) {
+    .pre-pre-footer {
+        width: 970px;
+    }
+}
+@media only screen and (min-width: 1200px) {
+    .pre-pre-footer {
+        width: 1200px;
+    }
+}
+
+.wpac.wp-yrw {
+    font-family: "Raleway" !important;
+}
+// footer newsletter signup
+.mc_var_label {
+    display: block !important;
+}
+
+.testimonials-container .vc_row:nth-child(even) .testimonials_photo i {
+    background-color: white;
+}
+@media only screen and (max-width: 995px) {
+    .testimonials-container .vc_row:nth-child(even) .testimonials_list.items2 li {
+        width: 100%;
+    }
+}
+
+.social-footer {
+    margin-bottom: 20px;
+}
+
+.social-footer .Defaults-facebook-square,
+.social-footer .Defaults-linkedin-square {
+    font-size: 2em;
+}
+
+.icon-circle-list + .info-c-full {
+    min-height: 65%;
+    margin: 19% 25%;
+    border-radius: 0;
+    padding: 0;
+}
+
+.vc_icon_element.vc_icon_element-outer .vc_icon_element-inner {
+    width: 1em;
+    height: 1em;
+}
+
+header nav ul.menu > li > a {
+    font-weight: 500 !important;
+    line-height: 65px;
+}
+
+.main_header.type1 header nav ul.menu > li.current-menu-ancestor,
+.main_header.type1 header nav ul.menu > li.current-menu-item > a,
+.main_header.type1 header nav ul.menu > li.current-menu-parent > a {
+    background: none !important;
+    color: #b22d1e !important;
+    font-weight: 600 !important;
+}
+
+.fixed-menu header nav ul.menu > li.current-menu-item > a,
+.fixed-menu header nav ul.menu > li.current-menu-parent > a {
+    background: none !important;
+    color: #A72F23 !important;
+    font-weight: 600 !important;
+}
+
+.logo,
+.logo img {
+    margin-left: 0;
+}
+
+header nav ul.menu > li > a {
+    letter-spacing: 0.25px;
+}
+
+.fixed-menu header,
+.header_parent_wrap header,
+.main_header,
+.top_search form input[type=text] {
+    border-bottom: #b22d1e solid 2px;
+    margin-bottom: 0;
+}
+
+.mb35 {
+    margin-bottom: 0;
+}
+
+.slotholder {
+    padding-top: 0;
+}
+
+.ultb3-box {
+    margin-top: 24px;
+}
+
+.content_block .ultb3-desc {
+    margin-bottom: 0 !important;
+}
+
+.flex-caption a.link_image {
+    font-size: large;
+}
+
+.flex-caption h2.post-title {
+    margin-bottom: 0;
+}
+
+.wpb_column.vc_column_container.vc_col-sm-9 h3 {
+    color: #fff;
+}
+
+.listing_meta {
+    font-size: 18px !important;
+}
+
+.listing_meta span.author {
+    display: none;
+}
+
+.listing_meta span.category {
+    display: none;
+    display: none;
+}
+
+.listing_meta span:nth-of-type(2n) {
+    display: none;
+}
+
+.listing_meta span:after {
+    content: no-close-quote !important;
+}
+
+#comments {
+    display: none;
+}
+
+.shortcode_button.btn_type5 {
+    background: #b22d1e;
+    border-color: #b22d1e;
+}
+
+.academicTutoring:hover .Defaults-check-square-o {
+    color: #A71F23;
+}
+
+.collegeCounseling:hover .Defaults-bank {
+    color: #5D9842;
+}
+
+.proctorServices:hover .Defaults-eye {
+    color: #FEBE2D;
+}
+
+.academicTutoring:hover .ult_pricing_heading {
+    background-color: #A71F23 !important;
+}
+
+.collegeCounseling:hover .ult_pricing_heading {
+    background-color: #5D9842 !important;
+}
+
+.proctorServices:hover .ult_pricing_heading {
+    background-color: #FEBE2D !important;
+}
+
+.acceptedSchools,
+.acceptedSchoolsRow {
+    margin-bottom: 0 !important;
+}
+
+.icon_description {
+    margin: 0 !important;
+}
+
+.smile_icon_list_wrap,
+.wpb_row .wpb_column .wpb_wrapper .smile_icon_list_wrap {
+    margin-bottom: 0 !important;
+}
+
+.ult_cl_link_10 a span.ult_btn10_span {
+    border-radius: 4px !important;
+}
+
+.footer {
+    border-top: #b22d1e solid 3px;
+}
+
+.howitworks .ult_pricing_heading {
+    padding: 15px 0 0 !important;
+}
+
+.howitworks .ult_price_body_block {
+    background: none !important;
+    margin-top: -7px;
+}
+
+.widget_archive ul li,
+.widget_categories ul li,
+.widget_meta ul li,
+.widget_nav_menu ul li,
+.widget_pages ul li,
+.widget_recent_comments ul li,
+.widget_recent_entries ul li {
+    padding: 0 0 6.5px !important;
+}
+
+.widget_archive ul li a:after,
+.widget_categories ul li a:after,
+.widget_meta ul li a:after,
+.widget_nav_menu ul li a:after,
+.widget_pages ul li a:after,
+.widget_recent_entries ul li a:after {
+    content: none !important;
+}
+
+.widget_archive ul li a,
+.widget_categories ul li a,
+.widget_meta ul li a,
+.widget_nav_menu ul li a,
+.widget_pages ul li a,
+.widget_recent_entries ul li a {
+    padding: 0 !important;
+}
+
+.footer_bottom {
+    padding: 14px 0 10px !important;
+}
+
+.footer_bottom .social_icons {
+    display: none;
+}
+
+.pre_footer .widget_text.contact_text {
+    background: none !important;
+}
+
+table td,
+table th {
+    padding: 7px;
+    border: none !important;
+}
+
+.cooperInstagram.wpb_column.vc_column_container.vc_col-sm-6 {
+    padding-left: 0;
+}
+
+.cooperTwitter.wpb_column.vc_column_container.vc_col-sm-6 {
+    padding-right: 0;
+}
+
+.content_block .uavc-list-content {
+    margin-bottom: 0 !important;
+}
+
+.content_block .vc_gitem-zone {
+    background-color: none !important;
+}
+
+.recent_posts_info {
+    display: none;
+}
+
+.socialMedia {
+    padding-left: 38px !important;
+}
+
+.bio.wpb_column.vc_column_container.vc_col-sm-6 {
+    padding-right: 0 !important;
+}
+
+.socialIconContainer {
+    padding-left: 0 !important;
+}
+@media only screen and (max-width: 375px) {
+    .bio button.ult-align-right {
+        float: none !important;
+    }
+
+    .vc_row.wpb_row.vc_inner.vc_row-fluid.socialMedia {
+        margin-left: 55px !important;
+    }
+
+    .socialIconContainer {
+        padding-left: 27px !important;
+    }
+    // light text
+    .light,
+    .smile_icon_list .icon_description h3 {
+        color: #fff !important;
+    }
+
+    .ult-new-ib-desc {
+        padding: 9px 23px !important;
+    }
+
+    .ult-new-ib-content {
+        padding-top: 5px !important;
+    }
+
+    .ult-new-ib .ult-new-ib-content p {
+        font-size: 14px !important;
+        line-height: 1.5em !important;
+        font-weight: 400 !important;
+    }
+
+    h2.ult-new-ib-title {
+        font-size: 19px !important;
+    }
+
+    .logo,
+    .logo img {
+        margin-left: 0;
+    }
+
+    .wpb_column.vc_column_container.vc_col-sm-12.vc_custom_1447797144871 {
+        padding-bottom: 25px;
+    }
+
+    .wpb_column.vc_column_container.vc_col-sm-9 h3 {
+        margin-top: 18px;
+    }
+
+    .smile_icon_list li .icon_list_icon {
+        width: 2em !important;
+        height: 2em !important;
+        line-height: 2em !important;
+    }
+
+    .info-circle-wrapper .smile_icon_list.left li .icon_description {
+        margin-left: 0.7em !important;
+    }
+
+    .committedStudents.wpb_column.vc_column_container.vc_col-sm-4 {
+        padding-bottom: 40px;
+    }
+
+    .icon_list_icon.animated.slideInLeft.delay-03 {
+        font-size: 85px !important;
+    }
+}
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
+    .vc_row.wpb_row.vc_inner.vc_row-fluid.socialMedia.vc_custom_1452198271368 {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }
+
+    .socialMedia {
+        padding-left: 17px !important;
+    }
+
+    .ult-new-ib-desc {
+        padding: 8px 19px !important;
+    }
+
+    .ult-ib-effect-style13 h2 {
+        font-size: 17px !important;
+    }
+
+    .ult-new-ib-content {
+        display: table !important;
+        font-size: 13px !important;
+        padding: 7px 0 !important;
+    }
+
+    .info-c-full.cirlce-noicon {
+        width: 85% !important;
+        margin: 17% 0 8% 8% !important;
+    }
+
+    .servicesOverview .info-circle-text {
+        font-size: 13px !important;
+    }
+
+    .servicesOverview h3.info-circle-heading {
+        font-size: 16px !important;
+        line-height: 16px !important;
+    }
+
+    .servicesOverview hr {
+        width: 58% !important;
+    }
+
+    .credits .icon_list_icon.animated.fadeInLeft.delay-03 {
+        width: 2em !important;
+    }
+}
+@media only screen and (max-width: 959px) {
+    .main_header .logo_sect img {
+        max-width: 80% !important;
+        height: auto !important;
+    }
+
+    a.menu_toggler {
+        top: 50px;
+    }
+}
+@media only screen and (min-width: 1824px) {
+    .tp-bgimg.defaultimg {
+        background-position: 50% 40% !important;
+    }
+}
+
+header nav ul.menu > li > a {
+    line-height: 65px !important;
+}
+
+.tagline a {
+    color: #5c5c5c;
+}
