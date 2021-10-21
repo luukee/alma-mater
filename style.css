@@ -1,23 +1,31 @@
 /*
-Theme Name: Hershel - Child
+Theme Name: Hershel Child
 Theme URI: https://livewp.site/wp/md/hershel/
-Author: Gt3themes
+Author: Luke Carl Hartman
 Author URI: gt3themes.com
-Description: GT3themes team presents absolutely fresh and powerful WordPress theme. It combines new technologies and functional design that helps to showcase your content in better way. This WordPress theme is developed with attention to details, so you can create effective presentation of a website easily. Enjoy building web pages with our product!
+Template: hershel
+Description: Hershel Child Theme
 Version: 2.2.1
 License: GNU General Public License version 3.0
 License URI: http://www.gnu.org/licenses/gpl-3.0.html
 Text Domain: hershel_child
 */
+
 :root {
 	--primary-color: #a71f23;
+	--primary-color-dark: #641D22;
 	--secondary-color: #febe2d;
+	--secondary-color-light: #FACD6F;
+	--tan: #9C925D;
 	--white: #fff;
 	--grey: #f2f2f2;
 	--black: #505050;
+	--black-alt: #222328;
 	--green: #0f9000;
-	--green-light: #569D5B;
-	--blue: #1A2F49;
+	--green-light: #569d5b;
+	--green-bland: #70872E;
+	--blue: #1a2f49;
+	--blue-light: #304764;
 	--boxShadow: 2px 2px 5px 0px #00000045;
 	--boxShadow-hover: 0px 0px 5px 0px #00000045;
 	--border-radius: 5px;
@@ -138,7 +146,38 @@ h3.heading {
 .cursor-default {
 	cursor: default !important;
 }
+/* buttons */
+.dual-buttton__custom .ult_ivan_button {
+	height: 50px;
+}
 /* END utilities */
+
+/* GT3 Shortcode elements */
+.post-grid__icon-links .sorting_block.round_type .img_block img {
+	border-radius: 0;
+	max-width: 30px;
+	margin: 0 auto;
+}
+.post-grid__icon-links .sorting_block.round_type .featured_meta {
+	display: none;
+}
+.post-grid__icon-links .view_link::before,
+.post-grid__icon-links .view_link::after {
+	display: none;
+}
+.post-grid__icon-links .img_block:hover .view_link {
+	background: transparent;
+}
+
+.post-grid-item__schools .vc_gitem-animated-block:after {
+    display: none;
+}
+.post-grid-item__schools .vc_gitem-animated-block:before {
+    background: var(--primary-color);
+		height: 1px;
+}
+/* END GT3 Shortcode elements */
+
 .alma-primary-color {
 	color: var(--primary-color);
 }
