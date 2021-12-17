@@ -14,7 +14,7 @@ Text Domain: hershel_child
 :root {
 	--primary-color: #a71f23;
 	--primary-color-dark: #8c2a31;
-	--primary-color-light:#bd2329;
+	--primary-color-light: #bd2329;
 	--secondary-color: #febe2d;
 	--secondary-color-light: #facd6f;
 	--tan: #9c925d;
@@ -511,11 +511,11 @@ dt {
 .testimonial-outer-container .testimonials_text {
 	padding: 0;
 }
-.testimonial-outer-container li .item .testimonials_photo {
+/* .testimonial-outer-container li .item .testimonials_photo {
 	width: 20px;
 	height: 20px;
 	border: none;
-}
+} */
 .logo-grid {
 	display: flex;
 	flex-wrap: wrap;
@@ -587,9 +587,9 @@ dt {
 .mc_var_label {
 	display: block !important;
 }
-.testimonials-container .vc_row:nth-child(even) .testimonials_photo i {
+/* .testimonials-container .vc_row:nth-child(even) .testimonials_photo i {
 	background-color: var(--white);
-}
+} */
 @media only screen and (max-width: 995px) {
 	.testimonials-container
 		.vc_row:nth-child(even)
@@ -898,7 +898,6 @@ a.menu_toggler {
 	a.menu_toggler {
 		top: 50px;
 	}
-
 }
 .logo_sect {
 	padding: 27px 0;
@@ -1055,32 +1054,76 @@ a.menu_toggler {
 	line-height: 1.25;
 }
 
+.width-100 {
+	width: 100%;
+}
+
 /* school grid element  */
 .school-grid__title * {
 	font-weight: 600;
 }
 .post-grid__schools.vc_gitem-zone {
-    background-size: contain;
-		background-color: transparent !important;
+	background-size: contain;
+	background-color: transparent !important;
 }
 /* fix seperator left and right spacing issue */
 .ult-xlarge-triangle .ult-main-seperator-inner {
-    margin-left: 0 !important;
+	margin-left: 0 !important;
 }
 
 .ult_main_dualbtn .aio-icon.none {
-    line-height: 2em;
+	line-height: 2em;
+}
+
+header nav ul.menu .counseling .sub-menu {
+	width: 280px;
+}
+
+header nav ul.sub-menu > li:hover > a,
+header nav ul.sub-menu > li.current-menu-item > a,
+header nav ul.sub-menu > li.current-menu-parent > a {
+	background: transparent;
+}
+
+header nav ul.sub-menu > li:hover,
+header nav ul.sub-menu > li.current-menu-item,
+header nav ul.sub-menu > li.current-menu-parent {
+	background: rgba(0, 10, 15, 0.15);
+}
+
+.menu-icon {
+	display: flex !important;
+	align-items: center;
 }
 
 .menu-icon::before {
-	display: inline-block;
-	font-style: normal;
-	font-variant: normal;
-	text-rendering: auto;
-	-webkit-font-smoothing: antialiased;
-	font-family: vc_material !important;
+	font-size: 17px;
+	font-family: "Font Awesome 5 Free";
+	font-weight: 900;
+	color: var(--white);
+	padding-left: 10px;
 }
 
-.icon-school::before {
-	font-family: "Font Awesome 5 Free"; font-weight: 900; content: "\e80c";
+.icon-grad::before {
+	content: "\f19d" !important;
+}
+
+.icon-search::before {
+	content: "\f002" !important;
+}
+
+.icon-question::before {
+	content: "\f128" !important;
+}
+
+.icon-runner::before {
+	content: "\f70c" !important;
+}
+
+.icon-eye::before {
+	content: "\f06e" !important;
+}
+
+.icon-college::before {
+	content: "\f66f" !important;
 }

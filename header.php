@@ -92,7 +92,7 @@
                     <div class="container">
                         <div class="fright">
                             <div class="tagline_items">
-                                <div class="log_in_out"><a href="https://almamatertutors.customcollegeplan.com/" target="_blank" rel="noopener"><i class="fa fa-sign-in"></i> <?php esc_html_e('Login', 'hershel'); ?></a></div>
+                                <div class="log_in_out"><a href="https://almamatertutors.customcollegeplan.com/" target="_blank" rel="noopener"><i class="Defaults-sign-in"></i> <?php esc_html_e('Login', 'hershel'); ?></a></div>
                                 <?php
                                 include_once(ABSPATH . 'wp-admin/includes/plugin.php');
                                 if (is_plugin_active('woocommerce/woocommerce.php')) {
@@ -237,14 +237,14 @@
                             <?php if (strlen(gt3_get_theme_option("phone")) > 0) {
                             ?>
                                 <a href="tel:+<?php echo gt3_get_theme_option("phone"); ?>">
-                                    <div class="phone"><i class="fa fa-phone"></i> <?php echo gt3_get_theme_option("phone"); ?>
+                                    <div class="phone"><i class="Defaults-phone-square"></i> <?php echo gt3_get_theme_option("phone"); ?>
                                     </div>
                                 </a>
                             <?php
                             } ?>
                             <?php if (strlen(gt3_get_theme_option("contacts_to")) > 0) {
                             ?>
-                                <div class="email"><a href="mailto:<?php echo gt3_get_theme_option("contacts_to"); ?>"><i class="fa fa-envelope-o"></i> <?php echo gt3_get_theme_option("contacts_to"); ?></a>
+                                <div class="email"><a href="mailto:<?php echo gt3_get_theme_option("contacts_to"); ?>"><i class="Defaults-envelope"></i> <?php echo gt3_get_theme_option("contacts_to"); ?></a>
                                 </div>
                             <?php
                             } ?>
@@ -390,7 +390,7 @@
                                     )); ?>
                                 </ul>
                             </div>
-                            <div class="log_in_out"><a href="<?php echo wp_login_url(); ?>"><i class="fa fa-sign-in"></i> <?php esc_html_e('Login', 'hershel'); ?></a></div>
+                            <div class="log_in_out"><a href="<?php echo wp_login_url(); ?>"><i class="Defaults-sign-in"></i> <?php esc_html_e('Login', 'hershel'); ?></a></div>
                         <?php
                         } ?>
                     </div>
