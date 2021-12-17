@@ -153,7 +153,7 @@
                                             } else {
                                             ?>
                                                 <p class="empty"><?php esc_html_e('No products in the cart.', 'hershel'); ?></p>
-                                            <?php 
+                                            <?php
                                             } ?>
                                         </div>
                                     </div>
@@ -236,8 +236,10 @@
                         <div class="fleft">
                             <?php if (strlen(gt3_get_theme_option("phone")) > 0) {
                             ?>
-                                <div class="phone"><i class="fa fa-phone"></i> <?php echo gt3_get_theme_option("phone"); ?>
-                                </div>
+                                <a href="tel:+<?php echo gt3_get_theme_option("phone"); ?>">
+                                    <div class="phone"><i class="fa fa-phone"></i> <?php echo gt3_get_theme_option("phone"); ?>
+                                    </div>
+                                </a>
                             <?php
                             } ?>
                             <?php if (strlen(gt3_get_theme_option("contacts_to")) > 0) {
