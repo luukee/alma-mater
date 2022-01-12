@@ -61,8 +61,13 @@ input[type="password"],
 input[type="submit"],
 textarea,
 p,
-.wpac {
+.wpac,
+.menu-item a {
 	font-family: "Poppins", sans-serif;
+}
+
+.menu-item a {
+	font-weight: 600;
 }
 
 h1 {
@@ -1092,38 +1097,38 @@ header nav ul.sub-menu > li.current-menu-parent {
 }
 
 .menu-icon {
-	display: flex !important;
+	display: flex;
 	align-items: center;
 }
 
+.menu-icon a {
+	width: 100%;
+}
+
 .menu-icon::before {
-	font-size: 17px;
-	font-family: "Font Awesome 5 Free";
-	font-weight: 900;
 	color: var(--white);
 	padding-left: 10px;
+	width: 25px;
 }
 
-.icon-grad::before {
-	content: "\f19d" !important;
+.menu-icon.Defaults-runner:before {
+	content: "";
+	background-image: url("/wp-content/uploads/runner.svg");
+	background-repeat: no-repeat;
+	background-position: left;
+	background-size: contain;
+	margin-left: 10px;
+	height: 15px;
+	width: 15px;
+}
+.mobile_menu_wrapper li:before {
+	display: block !important;
+	position: absolute;
+}
+.menu-item.active .sub-nav {
+	top: 0;
+	opacity: 1 !important;
+	visibility: visible !important;
 }
 
-.icon-search::before {
-	content: "\f002" !important;
-}
 
-.icon-question::before {
-	content: "\f128" !important;
-}
-
-.icon-runner::before {
-	content: "\f70c" !important;
-}
-
-.icon-eye::before {
-	content: "\f06e" !important;
-}
-
-.icon-college::before {
-	content: "\f66f" !important;
-}

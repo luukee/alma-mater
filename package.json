@@ -4,7 +4,12 @@
   "description": "Alma Mater WordPress Theme",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\""
+    "test": "echo \"Error: no test specified\"",
+    "sass-build": "node-sass wp-content/themes/hershel-child/scss -o wp-content/themes/hershel-child/css",
+    "sass-watch": "node-sass wp-content/themes/hershel-child/scss -o wp-content/themes/hershel-child/css -w",
+    "prefix-build": "postcss wp-content/themes/hershel-child/css/style.css -u autoprefixer -o wp-content/themes/hershel-child/style.css -w",
+    "browser-start": "browser-sync 'http://localhost:10018' -f='wp-content/themes/*/**.*' -w",
+    "dev": "npm-run-all sass-build --parallel sass-watch browser-start prefix-build"
   },
   "repository": {
     "type": "git",
@@ -19,7 +24,6 @@
   "devDependencies": {
     "autoprefixer": "^10.4.0",
     "browser-sync": "^2.27.7",
-    "node-sass": "^7.0.0",
     "npm-run-all": "^4.1.5",
     "postcss-cli": "^9.1.0"
   }
