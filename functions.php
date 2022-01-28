@@ -162,3 +162,14 @@ if (!function_exists('gt3pb_showportfolio_categorys')) {
         }
     }
 }
+// https://gist.github.com/ramseyp/4060095
+// https://www.daddydesign.com/wordpress/how-to-hide-the-wordpress-content-editor-on-specific-pages/
+add_action('admin_init', 'hide_editor');
+function hide_editor()
+{
+    $post_id = $_GET['post'] ? $_GET['post'] : $_POST['post_ID'];
+    if (!isset($post_id)) return;
+    if (!current_user_can('administrator')) {
+        remove_post_type_support('page', 'editor');
+    }
+}

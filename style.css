@@ -431,16 +431,12 @@ dt {
 .wpac.wp-yrw .wp-yelp-place .wp-yelp-left {
 	display: none !important;
 }
-@media only screen and (max-width: 690px) and (max-width: 995px) {
+@media screen and  (max-width: 750px) {
 	.wpac.wp-yrw .wp-yelp-list .wp-yelp-reviews {
 		flex-direction: column;
 	}
 }
-@media only screen and (min-width: 768px) {
-	.wpac.wp-yrw .wp-yelp-list .wp-yelp-reviews {
-		flex-direction: row;
-	}
-}
+
 .wpac.wp-yrw .wp-yelp-list .wp-yelp-reviews .wp-yelp-name {
 	color: var(--primary-color) !important;
 }
@@ -515,6 +511,12 @@ dt {
 }
 .testimonial-outer-container .testimonials_text {
 	padding: 0;
+}
+.testimonials_text {
+	background-color: var(--grey-light);
+}
+.testimonials_title {
+	color: var(--grey-light);
 }
 /* .testimonial-outer-container li .item .testimonials_photo {
 	width: 20px;
@@ -1113,7 +1115,7 @@ header nav ul.sub-menu > li.current-menu-parent {
 
 .menu-icon.Defaults-runner:before {
 	content: "";
-	background-image: url("/wp-content/uploads/runner.svg");
+	background-image: url("/wp-content/uploads/2022/01/runner.svg");
 	background-repeat: no-repeat;
 	background-position: left;
 	background-size: contain;
@@ -1131,4 +1133,11 @@ header nav ul.sub-menu > li.current-menu-parent {
 	visibility: visible !important;
 }
 
-
+/* Footer mailchimp widget  */
+.mc_var_label {
+    display: none !important;
+}
+#mc_subheader {
+    font-size: 13px;
+    margin-bottom: 0 !important;
+}

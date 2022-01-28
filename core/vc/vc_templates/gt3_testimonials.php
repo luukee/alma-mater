@@ -48,7 +48,7 @@ $compile = '';
 							<li>
 								<div class="item with_icon">
 									<div class="testimonial_item_wrapper">										
-										<div class="testimonials_photo"><i class="Defaults-quote-left"></i></div>                                                        
+										<div class="testimonials_photo"><i class="fa fa-quote-left"></i></div>                                                        
 										<div class="testimonials_text">
 											<p>' . get_the_content() . '</p>                                                            
 										</div> 
