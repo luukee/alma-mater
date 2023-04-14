@@ -253,6 +253,83 @@ function cptui_register_my_cpts_school()
 
 add_action('init', 'cptui_register_my_cpts_school');
 
+// College Sherpa Post Type
+function cptui_register_my_cpts_college_sherpa() {
+
+	/**
+	 * Post Type: College Sherpa.
+	 */
+
+	$labels = [
+		"name" => esc_html__( "College Sherpa", "hello-elementor-child" ),
+		"singular_name" => esc_html__( "College Sherpa Post", "hello-elementor-child" ),
+		"menu_name" => esc_html__( "College Sherpa", "hello-elementor-child" ),
+		"all_items" => esc_html__( "All College Sherpa Posts", "hello-elementor-child" ),
+		"add_new" => esc_html__( "Add new", "hello-elementor-child" ),
+		"add_new_item" => esc_html__( "Add new College Sherpa Post", "hello-elementor-child" ),
+		"edit_item" => esc_html__( "Edit College Sherpa Post", "hello-elementor-child" ),
+		"new_item" => esc_html__( "New College Sherpa Post", "hello-elementor-child" ),
+		"view_item" => esc_html__( "View College Sherpa Post", "hello-elementor-child" ),
+		"view_items" => esc_html__( "View College Sherpa Posts", "hello-elementor-child" ),
+		"search_items" => esc_html__( "Search College Sherpa Posts", "hello-elementor-child" ),
+		"not_found" => esc_html__( "No College Sherpa Posts found", "hello-elementor-child" ),
+		"not_found_in_trash" => esc_html__( "No College Sherpa Posts found in trash", "hello-elementor-child" ),
+		"parent" => esc_html__( "Parent College Sherpa Post:", "hello-elementor-child" ),
+		"featured_image" => esc_html__( "Featured image for this College Sherpa Post", "hello-elementor-child" ),
+		"set_featured_image" => esc_html__( "Set featured image for this College Sherpa Post", "hello-elementor-child" ),
+		"remove_featured_image" => esc_html__( "Remove featured image for this College Sherpa Post", "hello-elementor-child" ),
+		"use_featured_image" => esc_html__( "Use as featured image for this College Sherpa Post", "hello-elementor-child" ),
+		"archives" => esc_html__( "College Sherpa Post archives", "hello-elementor-child" ),
+		"insert_into_item" => esc_html__( "Insert into College Sherpa Post", "hello-elementor-child" ),
+		"uploaded_to_this_item" => esc_html__( "Upload to this College Sherpa Post", "hello-elementor-child" ),
+		"filter_items_list" => esc_html__( "Filter College Sherpa Posts list", "hello-elementor-child" ),
+		"items_list_navigation" => esc_html__( "College Sherpa Posts list navigation", "hello-elementor-child" ),
+		"items_list" => esc_html__( "College Sherpa Posts list", "hello-elementor-child" ),
+		"attributes" => esc_html__( "College Sherpa Posts attributes", "hello-elementor-child" ),
+		"name_admin_bar" => esc_html__( "College Sherpa Post", "hello-elementor-child" ),
+		"item_published" => esc_html__( "College Sherpa Post published", "hello-elementor-child" ),
+		"item_published_privately" => esc_html__( "College Sherpa Post published privately.", "hello-elementor-child" ),
+		"item_reverted_to_draft" => esc_html__( "College Sherpa Post reverted to draft.", "hello-elementor-child" ),
+		"item_scheduled" => esc_html__( "College Sherpa Post scheduled", "hello-elementor-child" ),
+		"item_updated" => esc_html__( "College Sherpa Post updated.", "hello-elementor-child" ),
+		"parent_item_colon" => esc_html__( "Parent College Sherpa Post:", "hello-elementor-child" ),
+	];
+
+	$args = [
+		"label" => esc_html__( "College Sherpa", "hello-elementor-child" ),
+		"labels" => $labels,
+		"description" => "",
+		"public" => true,
+		"publicly_queryable" => true,
+		"show_ui" => true,
+		"show_in_rest" => true,
+		"rest_base" => "",
+		"rest_controller_class" => "WP_REST_Posts_Controller",
+		"rest_namespace" => "wp/v2",
+		"has_archive" => "the-college-sherpa",
+		"show_in_menu" => true,
+		"show_in_nav_menus" => true,
+		"delete_with_user" => false,
+		"exclude_from_search" => false,
+		"capability_type" => "post",
+		"map_meta_cap" => true,
+		"hierarchical" => false,
+		"can_export" => false,
+		"rewrite" => [ "slug" => "the-college-sherpa", "with_front" => true ],
+		"query_var" => true,
+		"menu_position" => 5,
+		"menu_icon" => "dashicons-carrot",
+		"supports" => [ "title", "editor", "thumbnail", "excerpt", "author" ],
+		"taxonomies" => [ "post_tag" ],
+		"show_in_graphql" => false,
+	];
+
+	register_post_type( "college_sherpa", $args );
+}
+
+add_action( 'init', 'cptui_register_my_cpts_college_sherpa' );
+
+
 // User capabilities: Editor: remove Elementor Templates 
 // LINK: https://wordpress.org/support/topic/does-not-hide-elementor-templates/
 add_action( 'admin_menu', 'members_remove_menu_pages' );
