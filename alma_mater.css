@@ -579,3 +579,12 @@ div#wp-responsive-toggle a:before {
 .mce-container.mce-menu .mce-menu-item-preview.mce-active {
   background: #a71f23;
 }
+
+.postbox-header {
+    background: #1A2F49;
+    color: #fff;
+}
+
+#editor .postbox > .postbox-header:hover {
+    background: #a71f23;
+}
