@@ -582,9 +582,12 @@ div#wp-responsive-toggle a:before {
 
 .postbox-header {
     background: #1A2F49;
+}
+
+.postbox-header > .hndle {
     color: #fff;
 }
 
 #editor .postbox > .postbox-header:hover {
-    background: #a71f23;
+    background: #a71f23 !important;
 }
